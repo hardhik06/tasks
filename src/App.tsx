@@ -9,6 +9,8 @@ function App(): React.JSX.Element {
             </header>
             <p>
                 Hardhik Annam
+            </p>
+            <p>
                 Hello World
             </p>
         </div>
