@@ -1,4 +1,3 @@
-import { transpileModule } from "typescript";
 
 /**
  * Consume an array of numbers, and return a new array containing
