@@ -1,4 +1,3 @@
-import exp from "constants";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
