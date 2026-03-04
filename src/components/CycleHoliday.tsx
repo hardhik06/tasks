@@ -2,26 +2,26 @@ import React, { useState } from "react";
 import type { ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
-type Holiday = "🎄" | "🎃" | "🦃" | "🧧" | "🎆";
+type Holiday = "🎃" | "🎄" | "🎆" | "🦃" | "❤️";
 
 const ALPHABET_NEXT: Record<Holiday, Holiday> = {
-    "🎄": "🎆", // Christmas -> Fireworks
-    "🎆": "🧧", // Fireworks -> Lunar New Year
-    "🧧": "🎃", // Lunar New Year -> Pumpkin
-    "🎃": "🦃", // Pumpkin -> Turkey
-    "🦃": "🎄", // Turkey -> Christmas
+    "❤️": "🎃",
+    "🎃": "🎄",
+    "🎄": "🎆",
+    "🎆": "🦃",
+    "🦃": "❤️",
 };
 
 const YEAR_NEXT: Record<Holiday, Holiday> = {
-    "🧧": "🎆", // Lunar New Year (Jan/Feb) -> Fireworks (July)
-    "🎆": "🎃", // Fireworks (July) -> Pumpkin (Oct)
-    "🎃": "🦃", // Pumpkin (Oct) -> Turkey (Nov)
-    "🦃": "🎄", // Turkey (Nov) -> Christmas (Dec)
-    "🎄": "🧧", // Christmas (Dec) -> Lunar New Year (Jan/Feb)
+    "🎆": "🎃",
+    "🎃": "🦃",
+    "🦃": "🎄",
+    "🎄": "❤️",
+    "❤️": "🎆",
 };
 
 export function CycleHoliday(): ReactElement {
-    const [holiday, setHoliday] = useState<Holiday>("🎄");
+    const [holiday, setHoliday] = useState<Holiday>("🎃");
 
     return (
         <div>
