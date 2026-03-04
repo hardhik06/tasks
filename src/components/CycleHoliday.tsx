@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
 type Holiday = "🎄" | "🎃" | "🦃" | "🧧" | "🎆";
@@ -19,7 +20,7 @@ const YEAR_NEXT: Record<Holiday, Holiday> = {
     "🎄": "🧧", // Christmas (Dec) -> Lunar New Year (Jan/Feb)
 };
 
-export function CycleHoliday(): React.JSX.Element {
+export function CycleHoliday(): ReactElement {
     const [holiday, setHoliday] = useState<Holiday>("🎄");
 
     return (

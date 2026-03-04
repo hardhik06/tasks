@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import type { ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
-export function RevealAnswer(): React.JSX.Element {
+export function RevealAnswer(): ReactElement {
     const [visible, setVisible] = useState<boolean>(false);
 
     return (

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import type { ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
-export function StartAttempt(): React.JSX.Element {
+export function StartAttempt(): ReactElement {
     const [attempts, setAttempts] = useState<number>(4);
     const [inProgress, setInProgress] = useState<boolean>(false);
 

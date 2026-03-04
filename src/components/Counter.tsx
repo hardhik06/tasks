@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import type { ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
-export function Counter(): React.JSX.Element {
+export function Counter(): ReactElement {
     const [value, setValue] = useState<number>(0);
 
     return (
         <span>
             <Button
-                onClick={() =>
-                    { setValue((prevValue: number): number => prevValue + 1); }
-                }
+                onClick={(): void => {
+                    setValue((prevValue: number): number => prevValue + 1);
+                }}
             >
                 Add One
             </Button>
