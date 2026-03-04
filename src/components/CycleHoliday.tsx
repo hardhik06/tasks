@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
 type Holiday = "🎃" | "🎄" | "🎆" | "🦃" | "❤️";
@@ -21,7 +20,7 @@ const YEAR_NEXT: Record<Holiday, Holiday> = {
 };
 
 export function CycleHoliday(): ReactElement {
-    const [holiday, setHoliday] = useState<Holiday>("🎃");
+    const [holiday, setHoliday] = React.useState<Holiday>("🎃");
 
     return (
         <div>

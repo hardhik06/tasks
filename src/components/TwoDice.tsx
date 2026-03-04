@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
 /**
@@ -13,8 +12,8 @@ export function d6(): number {
 }
 
 export function TwoDice(): ReactElement {
-    const [leftDie, setLeftDie] = useState<number>(1);
-    const [rightDie, setRightDie] = useState<number>(2);
+    const [leftDie, setLeftDie] = React.useState<number>(1);
+    const [rightDie, setRightDie] = React.useState<number>(2);
 
     return (
         <div>

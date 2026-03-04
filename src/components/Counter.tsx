@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
 export function Counter(): ReactElement {
-    const [value, setValue] = useState<number>(0);
+    const [value, setValue] = React.useState<number>(0);
 
     return (
         <span>

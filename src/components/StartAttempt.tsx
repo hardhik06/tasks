@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { Button } from "react-bootstrap";
 
 export function StartAttempt(): ReactElement {
-    const [attempts, setAttempts] = useState<number>(4);
-    const [inProgress, setInProgress] = useState<boolean>(false);
+    const [attempts, setAttempts] = React.useState<number>(4);
+    const [inProgress, setInProgress] = React.useState<boolean>(false);
 
     function startQuiz(): void {
         setInProgress(true);
