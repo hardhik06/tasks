@@ -1,7 +1,7 @@
-import React, { type ReactElement } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 
-export function StartAttempt(): ReactElement {
+export function StartAttempt(): React.ReactElement {
     const [attempts, setAttempts] = React.useState<number>(4);
     const [inProgress, setInProgress] = React.useState<boolean>(false);
 
@@ -16,11 +16,18 @@ export function StartAttempt(): ReactElement {
             <Button onClick={startQuiz} disabled={inProgress || attempts === 0}>
                 Start Quiz
             </Button>
-            <Button onClick={() => { setInProgress(false); }} disabled={!inProgress}>
+            <Button
+                onClick={() => {
+                    setInProgress(false);
+                }}
+                disabled={!inProgress}
+            >
                 Stop Quiz
             </Button>
             <Button
-                onClick={() => { setAttempts(attempts + 1); }}
+                onClick={() => {
+                    setAttempts(attempts + 1);
+                }}
                 disabled={inProgress}
             >
                 Mulligan

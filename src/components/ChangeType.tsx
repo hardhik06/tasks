@@ -1,9 +1,11 @@
-import React, { type ReactElement } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import type { QuestionType } from "../interfaces/question";
 
-export function ChangeType(): ReactElement {
-    const [type, setType] = React.useState<QuestionType>("short_answer_question");
+export function ChangeType(): React.ReactElement {
+    const [type, setType] = React.useState<QuestionType>(
+        "short_answer_question",
+    );
 
     function toggleType(): void {
         setType(
