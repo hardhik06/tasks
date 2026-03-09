@@ -7,6 +7,11 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+
 
 function App(): React.ReactElement {
     return (
@@ -67,6 +72,14 @@ function App(): React.ReactElement {
             <TwoDice />
             <hr />
             <CycleHoliday />
+            <hr />
+            <DoubleHalf />
+            <hr />
+            <ChooseTeam />
+            <hr />
+            <ColoredBox />
+            <hr />
+            <ShoveBox />
         </div>
     );
 }
