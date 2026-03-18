@@ -11,7 +11,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
-
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.ReactElement {
     return (
@@ -80,6 +84,19 @@ function App(): React.ReactElement {
             <ColoredBox />
             <hr />
             <ShoveBox />
+            <hr />
+            <CheckAnswer expectedAnswer="42" />
+            <hr />
+            <GiveAttempts />
+            <hr />
+            <EditMode />
+            <hr />
+            <ChangeColor />
+            <hr />
+            <MultipleChoiceQuestion
+                expectedAnswer="Banana"
+                options={["Apple", "Banana", "Cherry"]}
+            />
         </div>
     );
 }
