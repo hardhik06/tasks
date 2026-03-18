@@ -1,15 +1,35 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
+
+type MultipleChoiceQuestionProps = {
+    expectedAnswer: string;
+    options: string[];
+};
 
 export function MultipleChoiceQuestion({
-    options,
     expectedAnswer,
-}: {
-    options: string[];
-    expectedAnswer: string;
-}): React.JSX.Element {
+    options,
+}: MultipleChoiceQuestionProps): React.JSX.Element {
+    const [selectedChoice, setSelectedChoice] = useState<string>(options[0]);
+
+    function updateChoice(event: React.ChangeEvent<HTMLSelectElement>): void {
+        setSelectedChoice(event.target.value);
+    }
+
     return (
         <div>
-            <h3>Multiple Choice Question</h3>
+            <Form.Group controlId="multiple-choice-question">
+                <Form.Label>Choose an answer:</Form.Label>
+                <Form.Select value={selectedChoice} onChange={updateChoice}>
+                    {options.map((option: string) => (
+                        <option key={option} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </Form.Select>
+            </Form.Group>
+
+            <div>{selectedChoice === expectedAnswer ? "✔️" : "❌"}</div>
         </div>
     );
 }
