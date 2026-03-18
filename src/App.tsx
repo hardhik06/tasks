@@ -15,7 +15,7 @@ import { CheckAnswer } from "./form-components/CheckAnswer";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { ChangeColor } from "./form-components/ChangeColor";
-import { MultipleChoiceQuestions } from "./form-components/MultipleChoiceQuestions";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 
 function App(): React.ReactElement {
     return (
@@ -93,7 +93,7 @@ function App(): React.ReactElement {
             <hr />
             <ChangeColor />
             <hr />
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="Banana"
                 options={["Apple", "Banana", "Cherry"]}
             />
