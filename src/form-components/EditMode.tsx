@@ -15,7 +15,9 @@ export function EditMode(): React.JSX.Element {
                 id="edit-mode-switch"
                 label="Edit Mode"
                 checked={editMode}
-                onChange={(e) => { setEditMode(e.target.checked); }}
+                onChange={(e) => {
+                    setEditMode(e.target.checked);
+                }}
             />
 
             {/* If NOT in edit mode → show text */}
@@ -30,9 +32,14 @@ export function EditMode(): React.JSX.Element {
                             <Form.Label>Name:</Form.Label>
                             <Form.Control
                                 value={name}
+                                onFocus={(e) => {
+                                    e.target.select();
+                                }}
                                 onChange={(
                                     e: React.ChangeEvent<HTMLInputElement>,
-                                ) => { setName(e.target.value); }}
+                                ) => {
+                                    setName(e.target.value);
+                                }}
                             />
                         </Form.Group>
 
@@ -41,7 +48,9 @@ export function EditMode(): React.JSX.Element {
                             id="student-checkbox"
                             label="Student?"
                             checked={isStudent}
-                            onChange={(e) => { setIsStudent(e.target.checked); }}
+                            onChange={(e) => {
+                                setIsStudent(e.target.checked);
+                            }}
                         />
                     </div>
 
