@@ -7,6 +7,15 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.ReactElement {
     return (
@@ -67,6 +76,27 @@ function App(): React.ReactElement {
             <TwoDice />
             <hr />
             <CycleHoliday />
+            <hr />
+            <DoubleHalf />
+            <hr />
+            <ChooseTeam />
+            <hr />
+            <ColoredBox />
+            <hr />
+            <ShoveBox />
+            <hr />
+            <CheckAnswer expectedAnswer="42" />
+            <hr />
+            <GiveAttempts />
+            <hr />
+            <EditMode />
+            <hr />
+            <ChangeColor />
+            <hr />
+            <MultipleChoiceQuestion
+                expectedAnswer="Banana"
+                options={["Apple", "Banana", "Cherry"]}
+            />
         </div>
     );
 }

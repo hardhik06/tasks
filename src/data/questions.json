@@ -169,27 +169,27 @@
         {
             "id": 478,
             "name": "Students",
-            "body": "How many students does the university have?",
+            "body": "How many students are taking CISC275 this semester?",
             "type": "short_answer_question",
             "options": [],
-            "expected": "Many",
+            "expected": "90",
             "points": 53,
             "published": true
         },
         {
             "id": 1937,
             "name": "Importance",
-            "body": "Why is this important?",
+            "body": "On a scale of 1 to 10, how important is this quiz for them?",
             "type": "short_answer_question",
             "options": [],
-            "expected": "Because",
+            "expected": "10",
             "points": 47,
             "published": true
         },
         {
             "id": 479,
             "name": "Sentience",
-            "body": "Are goats sentient?",
+            "body": "Is it technically possible for this quiz to become sentient?",
             "type": "short_answer_question",
             "options": [],
             "expected": "Yes",
@@ -199,20 +199,20 @@
         {
             "id": 777,
             "name": "Danger",
-            "body": "How dangerous is this?",
+            "body": "If this quiz became sentient, would it pose a danger to others?",
             "type": "short_answer_question",
             "options": [],
-            "expected": "Medium",
+            "expected": "Yes",
             "points": 60,
             "published": true
         },
         {
             "id": 1937,
             "name": "Listening",
-            "body": "Are you listening?",
+            "body": "Is this quiz listening to us right now?",
             "type": "short_answer_question",
             "options": [],
-            "expected": "Always",
+            "expected": "Yes",
             "points": 100,
             "published": true
         }
